@@ -5,33 +5,36 @@ def factorial(n):
         return n * f(n-1)
 
 def summaration(n):
-    print("Hello")
+    if n == 1:
+       return 1
+    if n > 0:
+       return n + summaration(n-1)
 
-def power(n):
+# def power(n):
 
-def fibonacci(n):
+# def fibonacci(n):
 
-def sond(n):
+# def sond(n):
 
-def pond(n):
+# def pond(n):
 
-def potwn(n):
+# def potwn(n):
 
-def sonir(n):
+# def sonir(n):
 
-def revdig(n):
+# def revdig(n):
 
-def euclid(n):
+# def euclid(n):
 
-def cib(n):
+# def cib(n):
 
-def sqrtbi(n):
+# def sqrtbi(n):
 
-def comboitem(n):
-
-
+# def comboitem(n):
 
 
-def what(a,b)
+
+
+# def what(a,b)
 n = 10
-print(f(n))
+print(summaration(n))
