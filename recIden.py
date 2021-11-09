@@ -11,14 +11,15 @@ def summaration(n):
        return n + summaration(n-1)
 
 def power(base, exp):
-    if exp != 1:
+    if exp > 1:
         return base * power(base,exp-1)
     if exp == 1:
         return base
     if exp == 0:
         return 1
     if exp < 0:
-        return "Sorry, no negative exponents"
+        #return "Sorry, no negative exponents"
+        return (base * power(base,exp+1))
 
 #def fibonacci(n): #Eli
 
@@ -89,7 +90,10 @@ def sqrtbi(n):
 def main():
     base=2
     exp=-2
-    print(power(base,exp))
+    if exp >= 0:
+        print(power(base,exp))
+    if exp < 0:
+        print(1/power(base,exp))
 
 if __name__ == '__main__':
     main()
