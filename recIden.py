@@ -47,33 +47,10 @@ def sond(n):
 
 #def cib(p,r,t): #Eli
 
-def sqrtbi(n):
-    '''Approximate solution of f(x)=0 on interval [a,b] by bisection method.
-
-    Parameters
-    ----------
-    f : function
-        The function for which we are trying to approximate a solution f(x)=0.
-    a,b : numbers
-        The interval in which to search for a solution. The function returns
-        None if f(a)*f(b) >= 0 since a solution is not guaranteed.
-    N : (positive) integer
-        The number of iterations to implement.
-
-    Returns
-    -------
-    x_N : number
-        The midpoint of the Nth interval computed by the bisection method. The
-        initial interval [a_0,b_0] is given by [a,b]. If f(m_n) == 0 for some
-        midpoint m_n = (a_n + b_n)/2, then the function returns this solution.
-        If all signs of values f(a_n), f(b_n) and f(m_n) are the same at any
-        iteration, the bisection method fails and return None.
-    '''
-
+def sqrtbi(f,N,a,b):
     if f(a)*f(b) >= 0:
         print("Bisection method fails.")
         return None
-    
     a_n = a
     b_n = b
     for n in range(1,N+1):
@@ -93,7 +70,12 @@ def sqrtbi(n):
             return None
     return (a_n + b_n)/2
 
-#def sqrtneuton(n,p,e)
+def sqrtneuton(n,p,e):
+    if abs(2*e - n) < p:
+        return e
+    if e == n:
+        return sqrtneuton((n,p,(e+n)/e)/2)
+        
 
 #def comboitem(n): #Yash
 
