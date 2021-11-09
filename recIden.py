@@ -30,10 +30,10 @@ def fibonacci(n):
         return(fibonacci(n-1) + fibonacci(n-2))
 
 def sond(n):
-    if n < 10:
-        return n
-    if n >= 10:
-        return(sond(n + 10) + n % (10))
+    if n == 0:
+        return 0
+    if n != 0:
+        return((n % 10) + (n//10))
 
 #def pond(n): #Yash
 
@@ -95,7 +95,7 @@ def sqrtbi(n):
 
 def sqrtneuton(n,p,e):
     if abs(2*e - n) < p:    
-        return e
+        return eson
     if e == n:
         return sqrtneuton((n,p,(e+n)/e)/2)
         
@@ -121,7 +121,7 @@ def main():
         n=10
         print(fibonacci(n))
     if choice == "sond":
-        n=10
+        n=12
         print(sond(n))
 
 if __name__ == '__main__':
