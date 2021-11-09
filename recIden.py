@@ -10,11 +10,15 @@ def summaration(n):
     if n > 0:
        return n + summaration(n-1)
 
-def power(n, p):
-    if n > 0:
-        return p * power(p,n-1)
-    if n == 1:
+def power(base, exp):
+    if exp != 1:
+        return base * power(base,exp-1)
+    if exp == 1:
+        return base
+    if exp == 0:
         return 1
+    if exp < 0:
+        return "Sorry, no negative exponents"
 
 #def fibonacci(n): #Eli
 
@@ -38,10 +42,10 @@ def power(n, p):
 
 #def comboitem(n): #Yash
 
+def main():
+    base=2
+    exp=-2
+    print(power(base,exp))
 
-
-
-# def what(a,b)
-n = 10
-p = 2
-print(power(p, n))
+if __name__ == '__main__':
+    main()
