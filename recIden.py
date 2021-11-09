@@ -4,11 +4,11 @@ def factorial(n):
     if n > 0:
         return n * factorial(n-1)
 
-def summaration(n):
+def summation(n):
     if n == 1:
        return 1
     if n > 0:
-       return n + summaration(n-1)
+       return n + summation(n-1)
 
 def power(base, exp):
     if exp > 1:
@@ -21,9 +21,19 @@ def power(base, exp):
         #return "Sorry, no negative exponents"
         return (base * power(base,exp+1))
 
-#def fibonacci(n): #Eli
+def fibonacci(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    if n > 1:
+        return(fibonacci(n-1) + fibonacci(n-2))
 
-#def sond(n): #Eli
+def sond(n):
+    if n < 10:
+        return n
+    if n >= 10:
+        return(sond(n + 10) + n % (10))
 
 #def pond(n): #Yash
 
@@ -37,10 +47,33 @@ def power(base, exp):
 
 #def cib(p,r,t): #Eli
 
-def sqrtbi(f,N,a,b):
+def sqrtbi(n):
+    '''Approximate solution of f(x)=0 on interval [a,b] by bisection method.
+
+    Parameters
+    ----------
+    f : function
+        The function for which we are trying to approximate a solution f(x)=0.
+    a,b : numbers
+        The interval in which to search for a solution. The function returns
+        None if f(a)*f(b) >= 0 since a solution is not guaranteed.
+    N : (positive) integer
+        The number of iterations to implement.
+
+    Returns
+    -------
+    x_N : number
+        The midpoint of the Nth interval computed by the bisection method. The
+        initial interval [a_0,b_0] is given by [a,b]. If f(m_n) == 0 for some
+        midpoint m_n = (a_n + b_n)/2, then the function returns this solution.
+        If all signs of values f(a_n), f(b_n) and f(m_n) are the same at any
+        iteration, the bisection method fails and return None.
+    '''
+
     if f(a)*f(b) >= 0:
         print("Bisection method fails.")
         return None
+    
     a_n = a
     b_n = b
     for n in range(1,N+1):
@@ -60,22 +93,31 @@ def sqrtbi(f,N,a,b):
             return None
     return (a_n + b_n)/2
 
-def sqrtneuton(n,p,e):
-    if abs(2*e - n) < p:    
-        return e
-    if e == n:
-        return sqrtneuton((n,p,(e+n)/e)/2)
-        
+#def sqrtneuton(n,p,e)
 
 #def comboitem(n): #Yash
 
 def main():
-    base=2
-    exp=-2
-    if exp >= 0:
-        print(power(base,exp))
-    if exp < 0:
-        print(1/power(base,exp))
+    choice = input("Function: ")
+    if choice == "exponent":
+        base=2
+        exp=-2
+        if exp >= 0:
+            print(power(base,exp))
+        if exp < 0:
+            print(1/power(base,exp))
+    if choice == "factorial":
+        n=5
+        print(factorial(n))
+    if choice == "summation":
+        n=5
+        print(summation(n))
+    if choice == "fibonacci":
+        n=10
+        print(fibonacci(n))
+    if choice == "sond":
+        n=10
+        print(sond(n))
 
 if __name__ == '__main__':
     main()
