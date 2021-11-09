@@ -93,7 +93,12 @@ def sqrtbi(n):
             return None
     return (a_n + b_n)/2
 
-#def sqrtneuton(n,p,e)
+def sqrtneuton(n,p,e):
+    if abs(2*e - n) < p:    
+        return e
+    if e == n:
+        return sqrtneuton((n,p,(e+n)/e)/2)
+        
 
 #def comboitem(n): #Yash
 
