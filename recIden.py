@@ -4,11 +4,11 @@ def factorial(n):
     if n > 0:
         return n * factorial(n-1)
 
-def summation(n):
+def summaration(n):
     if n == 1:
        return 1
     if n > 0:
-       return n + summation(n-1)
+       return n + summaration(n-1)
 
 def power(base, exp):
     if exp > 1:
@@ -21,19 +21,9 @@ def power(base, exp):
         #return "Sorry, no negative exponents"
         return (base * power(base,exp+1))
 
-def fibonacci(n):
-    if n == 0:
-        return 0
-    if n == 1:
-        return 1
-    if n > 1:
-        return(fibonacci(n-1) + fibonacci(n-2))
+#def fibonacci(n): #Eli
 
-def sond(n):
-    if n < 10:
-        return n
-    if n >= 10:
-        return(sond(n + 10) + n % (10))
+#def sond(n): #Eli
 
 #def pond(n): #Yash
 
@@ -71,7 +61,7 @@ def sqrtbi(f,N,a,b):
     return (a_n + b_n)/2
 
 def sqrtneuton(n,p,e):
-    if abs(2*e - n) < p:
+    if abs(2*e - n) < p:    
         return e
     if e == n:
         return sqrtneuton((n,p,(e+n)/e)/2)
@@ -80,26 +70,12 @@ def sqrtneuton(n,p,e):
 #def comboitem(n): #Yash
 
 def main():
-    choice = input("Function: ")
-    if choice == "exponent":
-        base=2
-        exp=-2
-        if exp >= 0:
-            print(power(base,exp))
-        if exp < 0:
-            print(1/power(base,exp))
-    if choice == "factorial":
-        n=5
-        print(factorial(n))
-    if choice == "summation":
-        n=5
-        print(summation(n))
-    if choice == "fibonacci":
-        n=10
-        print(fibonacci(n))
-    if choice == "sond":
-        n=18
-        print(sond(n))
+    base=2
+    exp=-2
+    if exp >= 0:
+        print(power(base,exp))
+    if exp < 0:
+        print(1/power(base,exp))
 
 if __name__ == '__main__':
     main()
