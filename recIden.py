@@ -16,28 +16,27 @@ def power(n, p):
     if n == 1:
         return 1
 
-#Hello eli
+#def fibonacci(n): #Eli
 
+#def sond(n): #Eli
 
-# def fibonacci(n):
+#def pond(n): #Yash
 
-# def sond(n):
+#def potwn(a,b): #Eli
 
-# def pond(n):
+#def sonir("?"): #Yash UNKNOWN
 
-# def potwn(n):
+#def revdig(n):#Eli
 
-# def sonir(n):
+#def euclidGCD(x,y): #Yash
 
-# def revdig(n):
+#def cib(p,r,t): #Eli
 
-# def euclid(n):
+#def sqrtbi(n): #Yash
 
-# def cib(n):
+#def sqrtneuton(n,p,e)
 
-# def sqrtbi(n):
-
-# def comboitem(n):
+#def comboitem(n): #Yash
 
 
 
