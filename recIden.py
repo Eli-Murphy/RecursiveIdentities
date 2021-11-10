@@ -37,7 +37,9 @@ def sond(n):
 
 #def pond(n): #Yash
 
-#def potwn(a,b): #Eli
+def potwn(a,b):
+    if 
+    return b + potwn(a-1,b)
 
 #def sonir("?"): #Yash UNKNOWN
 
@@ -95,7 +97,7 @@ def sqrtbi(n):
 
 def sqrtneuton(n,p,e):
     if abs(2*e - n) < p:    
-        return eson
+        return e
     if e == n:
         return sqrtneuton((n,p,(e+n)/e)/2)
         
@@ -123,6 +125,10 @@ def main():
     if choice == "sond":
         n=12
         print(sond(n))
+    if choice == "potwn":
+        a=3
+        b=6
+        print(potwn(a,b))
 
 if __name__ == '__main__':
     main()
