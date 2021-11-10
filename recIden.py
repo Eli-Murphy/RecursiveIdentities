@@ -1,3 +1,6 @@
+
+rev = 0
+
 def factorial(n):
     if n == 0:
         return 1
@@ -38,16 +41,31 @@ def sond(n):
 #def pond(n): #Yash
 
 def potwn(a,b):
-    if 
-    return b + potwn(a-1,b)
+    if a < b:
+        return potwn(b,a)
+    elif b != 0:
+        return (a + potwn(a,b-1))
+    else:
+        return 0
+
 
 #def sonir("?"): #Yash UNKNOWN
 
-#def revdig(n):#Eli
+def revdig(n):
+    if n > 0:
+        global rev
+        ones = n % 10
+        rev = rev * 10 + ones
+        revdig(int(n/10))
+        return rev
 
 #def euclidGCD(x,y): #Yash
 
-#def cib(p,r,t): #Eli
+def cib(p,r,t):
+    if t == 0:
+        return p
+    if t > 0:
+        return ((1+r) * cib(p,r,t-1))
 
 def sqrtbi(n):
     '''Approximate solution of f(x)=0 on interval [a,b] by bisection method.
@@ -126,9 +144,17 @@ def main():
         n=12
         print(sond(n))
     if choice == "potwn":
-        a=3
-        b=6
+        a=11
+        b=22
         print(potwn(a,b))
+    if choice == "revdig":
+        n = -11263
+        print(revdig(n))
+    if choice == "cib":
+        p = 1200
+        r = 5.4
+        t = 2
+        print(cib(p,r,t))
 
 if __name__ == '__main__':
     main()
