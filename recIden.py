@@ -35,10 +35,12 @@ def fibonacci(n):
 def sond(n):
     if n == 0:
         return 0
-    if n != 0:
-        return((n % 10) + (n//10))
+    return (n % 10 + sond(int(n / 10)))
 
-#def pond(n): #Yash
+def pond(n):
+    if n == 0:
+        return 0
+    return (n % 10 * sond(int(n / 10)))
 
 def potwn(a,b):
     if a < b:
@@ -155,6 +157,79 @@ def main():
         r = 5.4
         t = 2
         print(cib(p,r,t))
+    if choice == "pond":
+        n=20
+        print(pond(n))
 
+def upgradedMain():
+    print("Welcome to the recursive function's calculator!\n")
+    print(r"""
+Please enter a number 1-13
+
+1. Factorial of a number
+2. Summation of a number
+3. Power/exponential function
+4. Fibonacci’s numbers
+5. Sum of a number’s digits
+6. Product of number’s digits
+7. Product of two whole numbers
+8. Sum of numbers in a range
+9. Reverse the digits in a number
+10. Euclid’s GCD algorithm
+11. Find a compound interest balance
+12. Find a square root using the bisection method
+13. Find combinations of item 
+    """)
+    choice = input("Enter Here: ")
+    try:
+        choice = int(choice)
+        if choice == "1":
+            n = input("What number would you like to be factorialed?: ")
+            print("The factorial of ", n, " is ", factorial(n))
+        elif choice == "2":
+            n = input("What number are you tooking to find the summation of?: ")
+            print("The summation of ", n, " is ", summation(n))
+        elif choice == "3":
+            base = input("What is the base of the equation?: ")
+            exp = input("What is the exponent of the equation?: ")
+            print(base, " to the power of ", exp, " is ", power(base,exp))
+        elif choice == "4":
+            n = input("What is the number you would like to put into the Fibonacci equation?: ")
+            print(n, " put into the Fibonacci equation returns ", fibonacci(n))
+        elif choice == "5":
+            n = input("What number would you like to find the sum of its digits?: ")
+            print("The sum of the digits of ", n, " is ", sond(n))
+        elif choice == "6":
+            n = input("What number would you like to find the product of its digits?: ")
+            print("The product of the digits of ", n, " is ", pond(n))
+        elif choice == "7":
+            print("What two digits would you like to multiply?")
+            a = input("Number 1: ")
+            b = input("Number 2: ")
+            print(a, " times ", b, " is ", potwn(a,b), ".")
+        elif choice == "8":
+            n = ("What number would you like to find the sum of the digits in it's range?: ")
+            print("The sum of the digits in ", n, " in a range equals ", sonir(n), ".")
+        elif choice == "9":
+            n = ("What is the number that you would like to reverse the digits of?: ")
+            print(n, " reversed is ", revdig(n), ".")
+        elif choice == "10":
+            print("Please input the two numbers you would like to find the GCD of using Euclid's Algorithm. ")
+            a = input("Number 1: ")
+            b = input("Number 2: ")
+            print("The GCD of ", a, " and ", b, " is ", euclidGCD(a,b))
+        elif choice == "11":
+            print("Please input the required data to calculate the compund interest balance.")
+            p = input("Principle: ")
+            r = input("Rate: ")
+            t = input("Time (years): ")
+            print("The compound interest balance of the data inputted is ", cib(p,r,t))
+        elif choice == "12":
+            n = input("Please input the number you would like to find the square root of using the bisection method:")
+            print("The square root of ", n, " is ", sqrtbi(n))
+        elif choice == "13":
+        elif choice == "14":
+    except:
+        print("Please input a number 1-13")
 if __name__ == '__main__':
     main()
