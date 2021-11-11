@@ -22,7 +22,7 @@ def power(base, exp):
         return 1
     if exp < 0:
         #return "Sorry, no negative exponents"
-        return (base * power(base,exp+1))
+        return 1/3(base * power(base,exp+1))
 
 def fibonacci(n):
     if n == 0:
@@ -179,7 +179,7 @@ def upgradedMain():
         #             upgradedMain()
                     
         if choice == "1":
-            n = input("What number would you like to be factorialed?: ")
+            n = input("What number would you like to be factorialed? (Positive): ")
             try:
                 n = int(n)
                 print("\nThe factorial of ", n, " is ", factorial(n), ".\n")
@@ -188,7 +188,7 @@ def upgradedMain():
 
 
         elif choice == "2":
-            n = input("What number are you tooking to find the summation of?: ")
+            n = input("What number are you tooking to find the summation of? (Positive): ")
             try:
                 n = int(n)
                 print("\nThe summation of ", n, " is ", summation(n), ".\n")
@@ -213,7 +213,7 @@ def upgradedMain():
                 n = int(n)
                 print(n, " put into the Fibonacci equation returns ", fibonacci(n), ".\n")
             except:
-                print("\nPlease Input an integer number. \n")
+                print("\nPlease Input an integer number greater than zero. \n")
 
 
         elif choice == "5":
