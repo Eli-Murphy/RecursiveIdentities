@@ -314,15 +314,14 @@ def upgradedMain():
             break
 
         else:
-            print("Sorry, that is not a menu option. Please choose an option from the menu")
+            print("\nSorry, that is not a menu option. Please choose an option from the menu\n")
 
 if __name__ == '__main__':
 
     from art import *
-    tprint("Welcome!")
-    print("""
-                            MENU
-    ________________________________________________________
+    tprint("     Welcome!\n\n")
+    tprint("        MENU", font="cybermedium")
+    print("""    ________________________________________________________
     |Please enter a number 1-13                            |
     |                                                      |
     |   1. Factorial of a number                           |
