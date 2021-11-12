@@ -262,6 +262,8 @@ def upgradedMain():
             except:
                 print("\nPlease verify your inputs are integers. \n")
 
+
+
         elif choice == "12":
             n = input("Please input the number you would like to find the square root of using the bisection method:")
             try:
@@ -270,14 +272,29 @@ def upgradedMain():
             except:
                 print("\nPlease input an integer number. \n")
 
+
+
         elif choice == "13":
             #WHAT DOES THIS MEAN
             print("Sorry, this is currently work in progress.")
+            print("Please input the required data to calculate the compund interest balance.")
+            x = input("Assumed Sqrt: ")
+            e = input("epsilon: ")
+            a = input("Correct root: ")
+            try:
+                x = float(x)
+                e = float(e)
+                a = float(a)
+                print("The compound interest balance of the data inputted is ", sqrtneuton(x,e,a), ".\n")
+            except:
+                print("\nPlease verify your inputs are integers. \n")
+
 
 
         elif choice == "14":
             print("Sorry, this is currently work in progress.NEWTON")
  
+
 
         elif choice == "exit":
             break
@@ -307,6 +324,7 @@ if __name__ == '__main__':
     |   12. Find a square root using the bisection method  |
     |   13. Find combinations of item                      |
     |   14. Find a square root using Newton's method       |
+    |   Enter "exit" to close program                      |
     |______________________________________________________|
         """)
     upgradedMain()
