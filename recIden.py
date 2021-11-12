@@ -189,7 +189,7 @@ def upgradedMain():
             n = input("What number would you like to find the sum of its digits?: ")
             try:
                 n = int(n)
-                print("The sum of the digits of ", n, " is ", sond(n), ".\n")
+                print("The sum of the digits of", n, "is", str(sond(n)) + ".\n")
             except:
                 print("\nPlease input an integer number. \n")
 
@@ -211,7 +211,7 @@ def upgradedMain():
             try:
                 a = int(a)
                 b = int(b)
-                print(a, " times", b, "is", potwn(a,b)+ ".\n")
+                print(a, "times", b, "is", str(potwn(a,b))+ ".\n")
             except:
                 print("\nPlease verify your inputs are integers. \n")
 
