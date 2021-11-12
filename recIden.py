@@ -37,16 +37,24 @@ def sond(n):
         return 0
     return (n % 10 + sond(int(n / 10)))
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 def pond(p,r,t): 
     if t == 0:
         return p
     if t > 0:
         return (1+r) * pond(p,r,t-1)
-
+=======
+=======
+>>>>>>> 7c93c7518c7a7dd6490939b753ce33485273c31e
 def pond(n):
     if n == 0:
         return 0
-    return (n % 10 * pond(int(n / 10)))
+    return (n % 10 * sond(int(n / 10)))
+<<<<<<< HEAD
+>>>>>>> 7c93c7518c7a7dd6490939b753ce33485273c31e
+=======
+>>>>>>> 7c93c7518c7a7dd6490939b753ce33485273c31e
 
 def potwn(a,b):
     if a < b:
@@ -72,7 +80,7 @@ def revdig(n):
         return rev
 
 def euclidGCD(x,y): 
-    if y <= x and x % y == 0:
+    if y <= x and x % y = 0:
         return y
     if y >= x and x % y != 0:
         return euclidGCD(y, x % y)
@@ -81,53 +89,22 @@ def cib(p,r,t):
     if t == 0:
         return p
     if t > 0:
-        return (1+r) * pond(p,r,t-1)
+        return ((1+r) * cib(p,r,t-1))
 
-def sqrtbi(n):
-    '''Approximate solution of f(x)=0 on interval [a,b] by bisection method.
-
-    Parameters
-    ----------
-    f : function
-        The function for which we are trying to approximate a solution f(x)=0.
-    a,b : numbers
-        The interval in which to search for a solution. The function returns
-        None if f(a)*f(b) >= 0 since a solution is not guaranteed.
-    N : (positive) integer
-        The number of iterations to implement.
-
-    Returns
-    -------
-    x_N : number
-        The midpoint of the Nth interval computed by the bisection method. The
-        initial interval [a_0,b_0] is given by [a,b]. If f(m_n) == 0 for some
-        midpoint m_n = (a_n + b_n)/2, then the function returns this solution.
-        If all signs of values f(a_n), f(b_n) and f(m_n) are the same at any
-        iteration, the bisection method fails and return None.
-    '''
-
-    if f(a)*f(b) >= 0:
-        print("Bisection method fails.")
-        return None
-    
-    a_n = a
-    b_n = b
-    for n in range(1,N+1):
-        m_n = (a_n + b_n)/2
-        f_m_n = f(m_n)
-        if f(a_n)*f_m_n < 0:
-            a_n = a_n
-            b_n = m_n
-        elif f(b_n)*f_m_n < 0:
-            a_n = m_n
-            b_n = b_n
-        elif f_m_n == 0:
-            print("Found exact solution.")
-            return m_n
-        else:
-            print("Bisection method fails.")
-            return None
-    return (a_n + b_n)/2
+def sqrt_bi(n):
+    '''For convenience, let us assume that n is a positive number'''
+    low=0   #Set the lower limit to 0
+    high=max(n,1)   #Set the upper limit to the largest number between n and 1, that is: if n>=1, then the upper limit is n; if n<1, then the upper limit is 1
+    guess=(low+high)/2   #Start guessing from the middle value
+    count=1   #Set the initial number of guesses to 1
+    while abs(guess**2-n)>0 and count<100: #The loop will stop when the difference between the square of the guess value and n itself is infinitely close to the error value; at the same time, set the number of guesses not to exceed 100
+        if guess**2<n:  #If the square of the guess is less than n, set this as the lower limit
+            low=guess
+        else:           #If the square of the guess is greater than n, set this as the upper limit
+            high=guess
+        guess=(low+high)/2  #According to the new upper and lower limits, guess again
+        count+=1    #The number of guesses increases by 1 each time
+    return guess
 
 def sqrtneuton(x,e,a):
     if abs(a*a - x) < e:    
@@ -262,8 +239,6 @@ def upgradedMain():
             except:
                 print("\nPlease verify your inputs are integers. \n")
 
-
-
         elif choice == "12":
             n = input("Please input the number you would like to find the square root of using the bisection method:")
             try:
@@ -272,28 +247,13 @@ def upgradedMain():
             except:
                 print("\nPlease input an integer number. \n")
 
-
-
         elif choice == "13":
             #WHAT DOES THIS MEAN
             print("Sorry, this is currently work in progress.")
-            print("Please input the required data to calculate the compund interest balance.")
-            x = input("Assumed Sqrt: ")
-            e = input("epsilon: ")
-            a = input("Correct root: ")
-            try:
-                x = float(x)
-                e = float(e)
-                a = float(a)
-                print("The compound interest balance of the data inputted is ", sqrtneuton(x,e,a), ".\n")
-            except:
-                print("\nPlease verify your inputs are integers. \n")
-
 
 
         elif choice == "14":
-            print("Sorry, this is currently work in progress.NEWTON")
- 
+            print("Sorry, this is currently work in progress.")
 
 
         elif choice == "exit":
@@ -324,7 +284,6 @@ if __name__ == '__main__':
     |   12. Find a square root using the bisection method  |
     |   13. Find combinations of item                      |
     |   14. Find a square root using Newton's method       |
-    |   Enter "exit" to close program                      |
     |______________________________________________________|
         """)
     upgradedMain()
