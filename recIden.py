@@ -180,9 +180,10 @@ def upgradedMain():
                     
         if choice == "1":
             n = input("What number would you like to be factorialed? (Positive): ")
+            n = int(n)
             try:
                 n = int(n)
-                print("\nThe factorial of ", n, " is ", factorial(n), ".\n")
+                print("\nThe factorial of", n, "is", str(factorial(n)) + ".\n")
             except:
                 print("\nPlease Input an integer number. \n")
 
@@ -230,7 +231,7 @@ def upgradedMain():
             n = input("What number would you like to find the product of its digits?: ")
             try:
                 n = int(n)
-                print("The product of the digits of ", n, " is ", pond(n), ".\n")
+                print("The product of the digits of", n, "is", pond(n) + ".\n")
             except:
                 print("\nPlease input an integer number. \n")
 
@@ -242,7 +243,7 @@ def upgradedMain():
             try:
                 a = int(a)
                 b = int(b)
-                print(a, " times ", b, " is ", potwn(a,b), ".\n")
+                print(a, " times", b, "is", potwn(a,b)+ ".\n")
             except:
                 print("\nPlease verify your inputs are integers. \n")
 
@@ -251,7 +252,7 @@ def upgradedMain():
             n = ("What number would you like to find the sum of the digits in it's range?: ")
             try:
                 n = int(n)
-                print("The sum of the digits in ", n, " in a range equals ", sonir(n), ".\n")
+                print("The sum of the digits in", n, "in a range equals", sonir(n)+ ".\n")
             except:
                 print("\nPlease input an integer number. \n")
 
