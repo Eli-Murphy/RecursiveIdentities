@@ -37,24 +37,16 @@ def sond(n):
         return 0
     return (n % 10 + sond(int(n / 10)))
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 def pond(p,r,t): 
     if t == 0:
         return p
     if t > 0:
         return (1+r) * pond(p,r,t-1)
-=======
-=======
->>>>>>> 7c93c7518c7a7dd6490939b753ce33485273c31e
+
 def pond(n):
     if n == 0:
         return 0
-    return (n % 10 * sond(int(n / 10)))
-<<<<<<< HEAD
->>>>>>> 7c93c7518c7a7dd6490939b753ce33485273c31e
-=======
->>>>>>> 7c93c7518c7a7dd6490939b753ce33485273c31e
+    return (n % 10 * pond(int(n / 10)))
 
 def potwn(a,b):
     if a < b:
@@ -80,7 +72,7 @@ def revdig(n):
         return rev
 
 def euclidGCD(x,y): 
-    if y <= x and x % y = 0:
+    if y <= x and x % y == 0:
         return y
     if y >= x and x % y != 0:
         return euclidGCD(y, x % y)
@@ -89,7 +81,7 @@ def cib(p,r,t):
     if t == 0:
         return p
     if t > 0:
-        return ((1+r) * cib(p,r,t-1))
+        return (1+r) * pond(p,r,t-1)
 
 def sqrtbi(n):
     '''Approximate solution of f(x)=0 on interval [a,b] by bisection method.
@@ -284,8 +276,8 @@ def upgradedMain():
 
 
         elif choice == "14":
-            print("Sorry, this is currently work in progress.")
-
+            print("Sorry, this is currently work in progress.NEWTON")
+ 
 
         elif choice == "exit":
             break
