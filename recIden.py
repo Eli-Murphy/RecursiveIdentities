@@ -37,10 +37,24 @@ def sond(n):
         return 0
     return (n % 10 + sond(int(n / 10)))
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+def pond(p,r,t): 
+    if t == 0:
+        return p
+    if t > 0:
+        return (1+r) * pond(p,r,t-1)
+=======
+=======
+>>>>>>> 7c93c7518c7a7dd6490939b753ce33485273c31e
 def pond(n):
     if n == 0:
         return 0
     return (n % 10 * sond(int(n / 10)))
+<<<<<<< HEAD
+>>>>>>> 7c93c7518c7a7dd6490939b753ce33485273c31e
+=======
+>>>>>>> 7c93c7518c7a7dd6490939b753ce33485273c31e
 
 def potwn(a,b):
     if a < b:
@@ -51,7 +65,11 @@ def potwn(a,b):
         return 0
 
 
-#def sonir("?"): #Yash UNKNOWN
+def sonir(n): 
+    if n < 10:
+        return n
+    if n > 10:
+        return S(n+10) + (n % 10)
 
 def revdig(n):
     if n > 0:
@@ -61,7 +79,11 @@ def revdig(n):
         revdig(int(n/10))
         return rev
 
-#def euclidGCD(x,y): #Yash
+def euclidGCD(x,y): 
+    if y <= x and x % y = 0:
+        return y
+    if y >= x and x % y != 0:
+        return euclidGCD(y, x % y)
 
 def cib(p,r,t):
     if t == 0:
@@ -115,11 +137,12 @@ def sqrtbi(n):
             return None
     return (a_n + b_n)/2
 
-def sqrtneuton(n,p,e):
-    if abs(2*e - n) < p:    
-        return e
-    if e == n:
-        return sqrtneuton((n,p,(e+n)/e)/2)
+def sqrtneuton(x,e,a):
+    if abs(a*a - x) < e:    
+        return a
+    else:
+        a = (a * a + x) / (2 * a)
+        return 1 * sqrtneuton(x,e,a)
         
 
 #def comboitem(n): #Yash
