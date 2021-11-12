@@ -38,16 +38,22 @@ def sond(n):
     return (n % 10 + sond(int(n / 10)))
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 def pond(p,r,t): 
     if t == 0:
         return p
     if t > 0:
         return (1+r) * pond(p,r,t-1)
 =======
+=======
+>>>>>>> 7c93c7518c7a7dd6490939b753ce33485273c31e
 def pond(n):
     if n == 0:
         return 0
     return (n % 10 * sond(int(n / 10)))
+<<<<<<< HEAD
+>>>>>>> 7c93c7518c7a7dd6490939b753ce33485273c31e
+=======
 >>>>>>> 7c93c7518c7a7dd6490939b753ce33485273c31e
 
 def potwn(a,b):
