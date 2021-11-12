@@ -212,7 +212,7 @@ def upgradedMain():
             try:
                 a = int(a)
                 b = int(b)
-                print("The GCD of ", a, " and ", b, " is ", euclidGCD(a,b), ".\n")
+                print("The GCD of", a, "and", b, "is", str(euclidGCD(a,b)) + ".\n")
             except:
                 print("\nPlease verify your inputs are integers. \n")
 
