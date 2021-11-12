@@ -124,59 +124,12 @@ def sqrtneuton(n,p,e):
 
 #def comboitem(n): #Yash
 
-def main():
-    choice = input("Function: ")
-    if choice == "exponent":
-        base=2
-        exp=-2
-        if exp >= 0:
-            print(power(base,exp))
-        if exp < 0:
-            print(1/power(base,exp))
-    if choice == "factorial":
-        n=5
-        print(factorial(n))
-    if choice == "summation":
-        n=5
-        print(summation(n))
-    if choice == "fibonacci":
-        n=10
-        print(fibonacci(n))
-    if choice == "sond":
-        n=12
-        print(sond(n))
-    if choice == "potwn":
-        a=11
-        b=22
-        print(potwn(a,b))
-    if choice == "revdig":
-        n = -11263
-        print(revdig(n))
-    if choice == "cib":
-        p = 1200
-        r = 5.4
-        t = 2
-        print(cib(p,r,t))
-    if choice == "pond":
-        n=20
-        print(pond(n))
-
 def upgradedMain():
     print("Welcome to the recursive function's calculator!\n")
     while True:
 
         choice = input("Menu input here: ")
-        # while True:
-        #     try:
-        #         choice = int(choice)
-        #     except ValueError:
-        #         print("That is not a number!")
-        #     else:
-        #         if choice <= 1 or choice >= 14:
-        #             break
-        #         else:
-        #             print("Please enter a number between 1 and 13")
-        #             upgradedMain()
+
                     
         if choice == "1":
             n = input("What number would you like to be factorialed? (Positive): ")
@@ -192,7 +145,7 @@ def upgradedMain():
             n = input("What number are you tooking to find the summation of? (Positive): ")
             try:
                 n = int(n)
-                print("\nThe summation of ", n, " is ", summation(n), ".\n")
+                print("\nThe summation of", n, "is", str(summation(n)) + ".\n")
             except:
                 print("\nPlease Input an integer number. \n")
 
@@ -203,7 +156,7 @@ def upgradedMain():
             try:
                 base = int(base)
                 exp = int(exp)
-                print(base, " to the power of ", exp, " is ", power(base,exp), ".\n")
+                print(base, " to the power of", exp, "is", str(power(base,exp)) + ".\n")
             except:
                 print("\nPlease verify your inputs are integers. \n")
 
@@ -212,7 +165,7 @@ def upgradedMain():
             n = input("What is the number you would like to put into the Fibonacci equation?: ")
             try:
                 n = int(n)
-                print(n, " put into the Fibonacci equation returns ", fibonacci(n), ".\n")
+                print(n, "put into the Fibonacci equation returns", str(fibonacci(n))+ ".\n")
             except:
                 print("\nPlease Input an integer number greater than zero. \n")
 
