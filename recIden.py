@@ -37,24 +37,16 @@ def sond(n):
         return 0
     return (n % 10 + sond(int(n / 10)))
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 def pond(p,r,t): 
     if t == 0:
         return p
     if t > 0:
         return (1+r) * pond(p,r,t-1)
-=======
-=======
->>>>>>> 7c93c7518c7a7dd6490939b753ce33485273c31e
+
 def pond(n):
     if n == 0:
         return 0
     return (n % 10 * sond(int(n / 10)))
-<<<<<<< HEAD
->>>>>>> 7c93c7518c7a7dd6490939b753ce33485273c31e
-=======
->>>>>>> 7c93c7518c7a7dd6490939b753ce33485273c31e
 
 def potwn(a,b):
     if a < b:
@@ -80,7 +72,7 @@ def revdig(n):
         return rev
 
 def euclidGCD(x,y): 
-    if y <= x and x % y = 0:
+    if y <= x and x % y == 0:
         return y
     if y >= x and x % y != 0:
         return euclidGCD(y, x % y)
@@ -243,7 +235,7 @@ def upgradedMain():
             n = input("Please input the number you would like to find the square root of using the bisection method:")
             try:
                 n = int(n)
-                print("The square root of ", n, " is ", sqrtbi(n), ".\n")
+                print("The square root of ", n, " is ", sqrt_bi(n), ".\n")
             except:
                 print("\nPlease input an integer number. \n")
 
