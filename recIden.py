@@ -111,7 +111,7 @@ def comboitem(a, k):
         return [[]]
     r = []
     for i, x in enumerate(a):
-        for c in combs(a[i+1:], k - 1):
+        for c in comboitem(a[i+1:], k - 1):
             r.append([x] + c)
     return r
 
