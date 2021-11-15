@@ -138,6 +138,15 @@ def sonir(n):
         return sonir(n+10) + (n % 10)
 
 def revdig(n):
+    '''
+    Finds the reverse of a numbers digits.
+ 
+    :param name: n the number being acted on
+    :param type: integer
+    :returns: the number reversed
+    :return type: integer
+    :raises: 
+    '''
     if n > 0:
         global rev
         ones = n % 10
@@ -146,6 +155,16 @@ def revdig(n):
         return rev
 
 def euclidGCD(x,y): 
+    '''
+    Finds the greatest common denomenator of two numbers
+ 
+    :param name 1 : x one of the numbers being used
+    :param name 2 : y the other number being used 
+    :param type 1 and 2 : integer
+    :returns: the sum of the digits of n
+    :return type: integer
+    :raises: 
+    '''
     if y <= x and x % y == 0:
         return y
     if y >= x and x % y != 0:
