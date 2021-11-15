@@ -94,7 +94,7 @@ def pond(n):
  
     :param name: n the number being acted on
     :param type: integer
-    :returns: the sum of the digits of n
+    :returns: the product of the digits of n
     :return type: integer
     :raises: 
     '''
@@ -103,6 +103,16 @@ def pond(n):
     return (n % 10 * sond(int(n / 10)))
 
 def potwn(a,b):
+    '''
+    Finds the result of the product of two numbers.
+ 
+    :param name 1 : a one of the numbers being multiplied
+    :param name 2 : b the other number being multiplied
+    :param type 1 and 2 : integer 
+    :returns: the product of a and b
+    :return type: integer
+    :raises: 
+    '''
     if a < b:
         return potwn(b,a)
     elif b != 0:
@@ -112,6 +122,16 @@ def potwn(a,b):
 
 
 def sonir(n): 
+    '''
+    DO THIS YASH
+    Finds the result of the sum of a numbers digits.
+ 
+    :param name: n the number being acted on
+    :param type: integer
+    :returns: the sum of the digits of n
+    :return type: integer
+    :raises: 
+    '''
     if n < 10:
         return n
     if n > 10:
