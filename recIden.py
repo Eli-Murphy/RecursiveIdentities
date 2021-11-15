@@ -161,7 +161,7 @@ def euclidGCD(x,y):
     :param name 1 : x one of the numbers being used
     :param name 2 : y the other number being used 
     :param type 1 and 2 : integer
-    :returns: the sum of the digits of n
+    :returns: the GCD of x and y
     :return type: integer
     :raises: 
     '''
@@ -171,6 +171,17 @@ def euclidGCD(x,y):
         return euclidGCD(y, x % y)
 
 def cib(p,r,t):
+    '''
+    Finds the compund interest over time 
+ 
+    :param name 1 : p the initial amount
+    :param name 2 : r the rate
+    :param name 3 : t the time
+    :param type 1-3 : float
+    :returns: the compound interest
+    :return type: float
+    :raises: 
+    '''
     if t == 0:
         return p
     if t > 0:
