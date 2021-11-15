@@ -106,7 +106,14 @@ def sqrtneuton(x,e,a):
         return 1 * sqrtneuton(x,e,a)
         
 
-#def comboitem(n): #Yash
+def comboitem(a, k):
+    if k == 0:
+        return [[]]
+    r = []
+    for i, x in enumerate(a):
+        for c in combs(a[i+1:], k - 1):
+            r.append([x] + c)
+    return r
 
 def upgradedMain():
     print("Welcome to the recursive function's calculator!\n")
