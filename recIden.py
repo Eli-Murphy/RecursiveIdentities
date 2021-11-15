@@ -135,7 +135,7 @@ def sonir(n):
     if n < 10:
         return n
     if n > 10:
-        return S(n+10) + (n % 10)
+        return sonir(n+10) + (n % 10)
 
 def revdig(n):
     if n > 0:
