@@ -2,18 +2,51 @@
 rev = 0
 
 def factorial(n):
+
+    '''
+    Finds the result of the factorial
+ 
+    :param name: n the number being acted on
+    :param type: integer
+    :returns: the factorial of n
+    :return type: integer
+    :raises: 
+    '''
+
     if n == 0:
         return 1
     if n > 0:
         return n * factorial(n-1)
 
 def summation(n):
+
+    '''
+    Finds the result of the summation
+ 
+    :param name: n the number being acted on
+    :param type: integer
+    :returns: the summation of n
+    :return type: integer
+    :raises: 
+    '''
+
     if n == 1:
        return 1
     if n > 0:
        return n + summation(n-1)
 
 def power(base, exp):
+    '''
+    Finds the result of an exponent
+ 
+    :param name 1 : base the base number in the equation
+    :param name 2 : exp the exponent in the equation
+    :param type 1 and 2 : integer
+    :returns: base to the power of exp
+    :return type: integer
+    :raises: 
+    '''
+
     if exp > 1:
         return base * power(base,exp-1)
     if exp == 1:
@@ -25,6 +58,16 @@ def power(base, exp):
         return 1/3(base * power(base,exp+1))
 
 def fibonacci(n):
+    '''
+    Finds the requested number of digits in the Fibonacci sequence
+ 
+    :param name 1 : base the base number in the equation
+    :param name 2 : exp the exponent in the equation
+    :param type 1 and 2 : integer
+    :returns: base to the power of exp
+    :return type: integer
+    :raises: 
+    '''
     if n == 0:
         return 0
     if n == 1:
