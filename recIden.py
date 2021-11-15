@@ -344,19 +344,34 @@ def upgradedMain():
 
         elif choice == "12":
             n = input("Please input the number you would like to find the square root of using the bisection method:")
-            try:
-                n = int(n)
-                print("The square root of ", n, " is ", sqrt_bi(n), ".\n")
-            except:
-                print("\nPlease input an integer number. \n")
+            if n > 0:
+                try:
+                    n = int(n)
+                    print("The square root of ", n, " is ", sqrt_bi(n), ".\n")
+                except:
+                    print("\nPlease input an integer number. \n")
+            else:
+                print("Please only input numbers greater than zero. This function is not working with imaginary numbers.")
 
         elif choice == "13":
-            #WHAT DOES THIS MEAN
+            a = input("What is the length of the list?")
+            k = input("What is the number of elements in the list")
             print("Sorry, this is currently work in progress.")
 
 
         elif choice == "14":
-            print("Sorry, this is currently work in progress.")
+            e = input("What is the first x value?: ")
+            x = input("What is the second x value?: ") 
+            a = input("What is the slope or line?: ")
+            if e > 0 and x > 0:
+                try:
+                    e = float(e)
+                    x = float(x)
+                    a = float(a)
+                    print("The sqare root using newton's equation is " + sqrtneuton(x,e,a))
+                except:
+                    print("Sorry, please input a number either with a decimal or not.")
+            print("Please only input roots that are greater than zero. This function is not working with imaginary numbers.")
 
 
         elif choice == "exit":
