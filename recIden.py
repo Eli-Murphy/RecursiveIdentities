@@ -61,10 +61,9 @@ def fibonacci(n):
     '''
     Finds the requested number of digits in the Fibonacci sequence
  
-    :param name 1 : base the base number in the equation
-    :param name 2 : exp the exponent in the equation
-    :param type 1 and 2 : integer
-    :returns: base to the power of exp
+    :param name: n the number being acted on
+    :param type: integer
+    :returns: the value of n in the Fibonacci sequence
     :return type: integer
     :raises: 
     '''
@@ -76,17 +75,29 @@ def fibonacci(n):
         return(fibonacci(n-1) + fibonacci(n-2))
 
 def sond(n):
+    '''
+    Finds the result of the sum of a numbers digits.
+ 
+    :param name: n the number being acted on
+    :param type: integer
+    :returns: the sum of the digits of n
+    :return type: integer
+    :raises: 
+    '''
     if n == 0:
         return 0
     return (n % 10 + sond(int(n / 10)))
 
-def pond(p,r,t): 
-    if t == 0:
-        return p
-    if t > 0:
-        return (1+r) * pond(p,r,t-1)
-
 def pond(n):
+    '''
+    Finds the result of the product of a numbers digits.
+ 
+    :param name: n the number being acted on
+    :param type: integer
+    :returns: the sum of the digits of n
+    :return type: integer
+    :raises: 
+    '''
     if n == 0:
         return 0
     return (n % 10 * sond(int(n / 10)))
