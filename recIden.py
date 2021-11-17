@@ -241,7 +241,7 @@ def comboitem(l,n, mylist=[]):
         mylist.pop()
 
 
-def upgradedMain():
+def main():
     print("Welcome to the recursive function's calculator!\n")
     while True:
 
@@ -322,17 +322,17 @@ def upgradedMain():
             n = ("What number would you like to find the sum of the digits in it's range?: ")
             try:
                 n = int(n)
-                print("The sum of the digits in", n, "in a range equals", sonir(n)+ ".\n")
+                print("The sum of the digits in", n, "in a range equals", str(sonir(n))+ ".\n")
             except:
                 print("\nPlease input an integer number. \n")
 
 
 
         elif choice == "9":
-            n = ("What is the number that you would like to reverse the digits of?: ")
+            n = input("What is the number that you would like to reverse the digits of?: ")
             try:
                 n = int(n)
-                print(n, " reversed is ", revdig(n), ".\n")
+                print(n, "reversed is", str(revdig(n))+ ".\n")
             except:
                 print("\nPlease input an integer number. \n")
 
@@ -360,7 +360,7 @@ def upgradedMain():
                 p = int(p)
                 r = int(r)
                 t = int(t)
-                print("The compound interest balance of the data inputted is ", cib(p,r,t), ".\n")
+                print("The compound interest balance of the data inputted is", str(cib(p,r,t))+ ".\n")
             except:
                 print("\nPlease verify your inputs are integers. \n")
 
@@ -369,16 +369,16 @@ def upgradedMain():
             if n > 0:
                 try:
                     n = int(n)
-                    print("The square root of ", n, " is ", sqrt_bi(n), ".\n")
+                    print("The square root of", n, "is", str(sqrt_bi(n)) + ".\n")
                 except:
                     print("\nPlease input an integer number. \n")
             else:
-                print("Please only input numbers greater than zero. This function is not working with imaginary numbers.")
+                print("Please only input numbers greater than zero. This function is not working with imaginary numbers.\n")
 
         elif choice == "13":
             a = input("What is the length of the list?")
             k = input("What is the number of elements in the list")
-            print("Sorry, this is currently work in progress.")
+            print("Sorry, this is currently work in progress.\n")
 
 
         elif choice == "14":
@@ -390,10 +390,10 @@ def upgradedMain():
                     e = float(e)
                     x = float(x)
                     a = float(a)
-                    print("The sqare root using newton's equation is " + sqrtneuton(x,e,a))
+                    print("The sqare root using newton's equation is " + str(sqrtneuton(x,e,a))+ ".\n")
                 except:
-                    print("Sorry, please input a number either with a decimal or not.")
-            print("Please only input roots that are greater than zero. This function is not working with imaginary numbers.")
+                    print("Sorry, please input a number either with a decimal or not.\n")
+            print("Please only input roots that are greater than zero. This function is not working with imaginary numbers.\n")
 
 
         elif choice == "exit":
@@ -426,4 +426,4 @@ if __name__ == '__main__':
     |   14. Find a square root using Newton's method       |
     |______________________________________________________|
         """)
-    upgradedMain()
+    main()
