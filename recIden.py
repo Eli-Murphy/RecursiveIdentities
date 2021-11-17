@@ -123,7 +123,6 @@ def potwn(a,b):
 
 def sonir(n): 
     '''
-    DO THIS YASH
     Finds the result of the sum of a numbers digits.
  
     :param name: n the number being acted on
@@ -203,6 +202,18 @@ def sqrt_bi(n):
     return guess
 
 def sqrtneuton(x,e,a):
+    '''
+    We find the roots using derivatives 
+     Finds the compund interest over time 
+ 
+    :param name 1 : x the first x value
+    :param name 2 : e epsilon
+    :param name 3 : a slope
+    :param type 1-3 : float
+    :returns: resulting root
+    :return type: float
+    :raises: 
+    '''
     if abs(a*a - x) < e:    
         return a
     else:
@@ -210,14 +221,25 @@ def sqrtneuton(x,e,a):
         return 1 * sqrtneuton(x,e,a)
         
 
-def comboitem(a, k):
-    if k == 0:
-        return [[]]
-    r = []
-    for i, x in enumerate(a):
-        for c in comboitem(a[i+1:], k - 1):
-            r.append([x] + c)
-    return r
+
+def comboitem(l,n, mylist=[]):
+    '''
+    returns the combonations of the list
+    :param name 1 : l is the list
+    :param name 2 : n is number of combos wanted
+    :param type 1 : list
+    :param type 2 : Int
+    :returns: combos of list
+    :return type: lists
+    :raises: 
+
+    '''
+    if not n:  print(mylist)
+    for i in range(len(l)):
+        mylist.append(l[i])
+        combination(l[i+1:], n-1, mylist)
+        mylist.pop()
+
 
 def upgradedMain():
     print("Welcome to the recursive function's calculator!\n")
