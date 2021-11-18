@@ -229,7 +229,7 @@ def comboitem(a, k):
         return [[]]
     r = []
     for i, x in enumerate(a):
-        for c in combs(a[i+1:], k - 1):
+        for c in comboitem(a[i+1:], k - 1):
             r.append([x] + c)
     #print '\t' * k, k, 'of', a, '=', r
     return r
@@ -360,7 +360,7 @@ def main():
 
         elif choice == "12":
             n = input("Please input the number you would like to find the square root of using the bisection method:")
-            if n > 0:
+            if int(n) > 0:
                 try:
                     n = int(n)
                     print("The square root of", n, "is", str(sqrt_bi(n)) + ".\n")
@@ -370,15 +370,15 @@ def main():
                 print("Please only input numbers greater than zero. This function is not working with imaginary numbers.\n")
 
         elif choice == "13":
-            l = input("Input items in list seperated by space: ")
-            n = input("Input amount of items you would like to combine?: ")
+            a = input("Input items in list seperated by space: ")
+            k = input("Input amount of items you would like to combine?: ")
             print("\n")
-            l = l.split()
+            a = a.split()
             try:
-                n = int(n)
-                if n > 0 and n <= len(l):
+                k = int(k)
+                if k > 0 and k <= len(a):
                         print("Here are your results:")
-                        print(comboitem(l,n), "\n")
+                        print(comboitem(a,k), "\n")
                         print("\n")    
             except:
                 print("The amount of items you would like to combine must be a positive number and is less than or equal to the length of the list.")
