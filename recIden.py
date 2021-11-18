@@ -223,23 +223,16 @@ def sqrtneuton(x,e,a):
         
 
 
-def comboitem(l,n, mylist=[]):
-    '''
-    returns the combonations of the list
-    :param name 1 : l is the list
-    :param name 2 : n is number of combos wanted
-    :param type 1 : list
-    :param type 2 : Int
-    :returns: combos of list
-    :return type: lists
-    :raises: 
 
-    '''
-    if not n:  return mylist
-    for i in range(len(l)):
-        mylist.append(l[i])
-        comboitem(l[i+1:], n-1, mylist)
-        mylist.pop()
+def comboitem(a, k):
+    if k == 0:
+        return [[]]
+    r = []
+    for i, x in enumerate(a):
+        for c in combs(a[i+1:], k - 1):
+            r.append([x] + c)
+    #print '\t' * k, k, 'of', a, '=', r
+    return r
 
 
 def main():
