@@ -1,6 +1,7 @@
 
 rev = 0
 
+
 def factorial(n):
 
     '''
@@ -234,10 +235,10 @@ def comboitem(l,n, mylist=[]):
     :raises: 
 
     '''
-    if not n:  print(mylist)
+    if not n:  return mylist
     for i in range(len(l)):
         mylist.append(l[i])
-        combination(l[i+1:], n-1, mylist)
+        comboitem(l[i+1:], n-1, mylist)
         mylist.pop()
 
 
@@ -376,11 +377,19 @@ def main():
                 print("Please only input numbers greater than zero. This function is not working with imaginary numbers.\n")
 
         elif choice == "13":
-            a = input("What is the length of the list?")
-            k = input("What is the number of elements in the list")
-            print("Sorry, this is currently work in progress.\n")
-
-
+            l = input("Input items in list seperated by space: ")
+            n = input("Input amount of items you would like to combine?: ")
+            print("\n")
+            l = l.split()
+            try:
+                n = int(n)
+                if n > 0 and n <= len(l):
+                        print("Here are your results:")
+                        print(comboitem(l,n), "\n")
+                        print("\n")    
+            except:
+                print("The amount of items you would like to combine must be a positive number and is less than or equal to the length of the list.")
+                
         elif choice == "14":
             e = input("What is the first x value?: ")
             x = input("What is the second x value?: ") 
